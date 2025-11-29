@@ -6,7 +6,7 @@ A simple Python script that generates QR codes from user input and saves them as
 
 - Interactive command-line interface
 - Generates QR codes from any text input
-- Saves QR codes as PNG files with unique random filenames
+- Saves QR codes as PNG files with the current date
 - Stores the original data in corresponding text files
 - Creates a dedicated `codes/` directory for output files
 
@@ -41,7 +41,7 @@ Follow the prompts:
 
 The script will:
 - Create a `codes/` directory if it doesn't exist
-- Generate a unique filename (QRCode_[random_number].png)
+- Generate a unique filename (QRCode_[date].png)
 - Save the QR code as a PNG image
 - Save the original data in a corresponding text file
 
@@ -50,13 +50,13 @@ The script will:
 ```
 Please enter the value you want to turn into a QR code:
 > https://github.com/xangeyfun
-QR code saved as QRCode_1234567.png!
+QR code saved as QRCode_20251129_150332.png!
 ```
 
 ## Output Files
 
-- PNG files: `codes/QRCode_[number].png`
-- Text files: `codes/QRCode_[number].txt` (contains the original data)
+- PNG files: `codes/QRCode_[date].png`
+- Text files: `codes/QRCode_[date].txt` (contains the original data)
 
 ## License
 
