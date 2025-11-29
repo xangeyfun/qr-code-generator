@@ -1,24 +1,29 @@
 import os
 import qrcode
-import random
+from datetime import datetime
 
-
+print("QR Code Generator")
 while True:
     # Create "codes" directory if doesnt exist
     if not os.path.exists("codes/"):
         os.mkdir("codes/")
 
-    print("Please enter the value you want to turn into a QR code:")
+    print("Type any text or URL to create a QR code.")
+    print("Type 'exit' or 'quit' to stop.")
+
     data = input("> ").strip()
     if data.lower() in ("exit", "quit"):
         print("Bye!")
         break
 
-    number = random.randint(1, 10000000)
+    number = datetime.now().strftime("%Y%m%d_%H%M%S")
     with open(f"codes/QRCode_{number}.txt", "a") as f:
-        f.write(f"QR Code value: {data}")
-
-    qr = qrcode.make(data)
-    qr.save(f"codes/QRCode_{number}.png")
-    print(f"QR code saved as QRCode_{number}.png!")
-    
+        f.write(f"QR Code value:\n {data}")
+    try:
+        qr = qrcode.make(data)
+        qr.save(f"codes/QRCode_{number}.png")
+        qr.show()
+        print(f"QR code saved as QRCode_{number}.png!")
+    except Exception as e:
+        print(f"Failed to create QR code: {e}")
+        break

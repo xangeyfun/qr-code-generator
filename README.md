@@ -49,7 +49,7 @@ The script will:
 
 ```
 Please enter the value you want to turn into a QR code:
-> https://github.com/xangey
+> https://github.com/xangeyfun
 QR code saved as QRCode_1234567.png!
 ```
 
