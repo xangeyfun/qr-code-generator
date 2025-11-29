@@ -19,7 +19,7 @@ A simple Python script that generates QR codes from user input and saves them as
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/xangey/qr-code-generator.git
+git clone https://github.com/xangeyfun/qr-code-generator.git
 cd qr-code-generator
 ```
 
