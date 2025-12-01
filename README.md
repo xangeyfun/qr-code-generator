@@ -32,7 +32,7 @@ pip install qrcode
 
 Run the script:
 ```bash
-python generator.py
+python3 generator.py
 ```
 
 Follow the prompts:
